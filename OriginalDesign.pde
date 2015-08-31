@@ -33,7 +33,6 @@ void draw() {
   h+=0.02;
 
   stars();
-  //shoot();
 }
 
 void function() {
@@ -127,8 +126,6 @@ void scene() {
     line(297, 220, 307, 220);
   }
 
-  if (mouseX<300 && mouseX>100) {
-  }
 }
 
 void stars() {
@@ -233,9 +230,9 @@ float ellipseH = 1; */
 
   
 */
+}
 
-
-if (ellipseW < 3 && ellipseH < 3){
+if (ellipseW < 3 && ellipseH < 3) {
 
   starsOpen = true;
 
@@ -244,8 +241,7 @@ if (ellipseW < 3 && ellipseH < 3){
   starsOpen = false; 
 }
 
-if (starsOpen){
-
+if(starsOpen){
   ellipseW += 1;
   ellipseH += 1;
 } else {
@@ -253,10 +249,6 @@ if (starsOpen){
   ellipseH -= 2;
 }
  
- noFill();
- 
- //stroke(255,0,0);
- //arc(276,122,60,80, 1 PI, 0 PI);
 
 }
 
