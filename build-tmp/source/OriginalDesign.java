@@ -1,3 +1,19 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class OriginalDesign extends PApplet {
+
 float moonY = 60;
 float moonReflectionY = 200;
 float h = 0;
@@ -11,12 +27,12 @@ float ellipseH = 1;
 boolean starsOpen = true;
 
 
-void setup() {
+public void setup() {
   size(400, 400);
   background(0, 10, 35);
 }
 
-void draw() {
+public void draw() {
   function(); 
   //  backgrass();
   scene();
@@ -25,22 +41,22 @@ void draw() {
   fill(255, 255, 255);
   ellipse(320, moonY+h2, 40, 40);
   h2 = 3*sin(h);
-  h+=0.010;
+  h+=0.010f;
   //moon reflection
   fill(255, 255, 255, 30);
   ellipse(320, moonReflectionY+h2, 40, 40);
   h2 = 5*sin(h);
-  h+=0.02;
+  h+=0.02f;
 
   stars();
   //shoot();
 }
 
-void function() {
+public void function() {
   //println(mouseX, mouseY);
 }
 
-void scene() {
+public void scene() {
   background(0, 10, 35);
 
   // Water
@@ -131,7 +147,7 @@ void scene() {
   }
 }
 
-void stars() {
+public void stars() {
   //Stars
   fill(255, 255, 0);
   //VALUES LESS THAN 120; LEFT HALF OF STARS
@@ -273,3 +289,12 @@ if (starsOpen){
  */
 
  
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "OriginalDesign" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
+  }
+}
