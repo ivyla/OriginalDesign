@@ -95,7 +95,7 @@ void scene() {
   }
 
 }
-/*
+
 void stars() {
   //Stars
   fill(255, 255, 0);
@@ -188,4 +188,3 @@ void stars() {
     ellipseH -= 2;
   }
 }
-*/
