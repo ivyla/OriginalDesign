@@ -47,7 +47,7 @@ void scene() {
   fill(71, 38, 0);
   quad(125, 250, 180, 170, 225, 170, 275, 250);
   stroke(55, 20, 0);
-  line(170, 188, 234, 188); 
+//  line(170, 188, 234, 188); 
   strokeWeight(7);
 
   // Backgrass 
