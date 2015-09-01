@@ -29,7 +29,7 @@ void draw() {
   h2 = 5*sin(h);
   h+=0.02;
 
-  //stars();
+  stars();
 }
 
 void scene() {
@@ -94,4 +94,97 @@ void scene() {
     line(297, 220, 307, 220);
   }
 
+}
+
+void stars() {
+  //Stars
+  fill(255, 255, 0);
+  //VALUES LESS THAN 120; LEFT HALF OF STARS
+  ellipse(50, 40, ellipseW, ellipseH);
+  ellipse(23, 86, ellipseW, ellipseH);
+  ellipse(103, 86, ellipseW, ellipseH);
+  ellipse(60, 100, ellipseW, ellipseH);
+  ellipse(94, 52, ellipseW, ellipseH);
+  ellipse(90, 12, ellipseW, ellipseH);
+  ellipse(59, 73, ellipseW, ellipseH);
+
+  //VALUES GREATER THAN 120, BUT LESS THAN 200. RIGHT HALF OF STARS
+  ellipse(137, 38, ellipseW, ellipseH);
+  ellipse(146, 83, ellipseW, ellipseH);
+  ellipse(188, 69, ellipseW, ellipseH);
+  ellipse(169, 53, ellipseW, ellipseH);
+  ellipse(180, 88, ellipseW, ellipseH);
+  ellipse(174, 17, ellipseW, ellipseH); 
+
+  //VALUES GREATER THAN 200, BUT LESS THAN 330. LEFT RIGHT HALF OF STARS
+  ellipse(318, 15, ellipseW, ellipseH);  
+  ellipse(282, 89, ellipseW, ellipseH);
+  ellipse(234, 18, ellipseW, ellipseH);
+  ellipse(263, 27, ellipseW, ellipseH);
+  ellipse(278, 49, ellipseW, ellipseH);
+  ellipse(289, 23, ellipseW, ellipseH);
+
+  //GREATER THAN 300
+  ellipse(365, 73, ellipseW, ellipseH);
+  ellipse(386, 26, ellipseW, ellipseH);
+  ellipse(393, 104, ellipseW, ellipseH);
+  ellipse(349, 24, ellipseW, ellipseH);
+  ellipse(356, 45, ellipseW, ellipseH);
+  ellipse(330, 100, ellipseW, ellipseH);
+  ellipse(335, 117, ellipseW, ellipseH);
+
+  // REFLECTION
+  fill(255, 255, 0, 70);
+  //VALUES LESS THAN 120; LEFT HALF OF STARS
+  ellipse(50, 40+142, ellipseW, ellipseH);
+  ellipse(23, 86+142, ellipseW, ellipseH);
+  ellipse(103, 86+142, ellipseW, ellipseH);
+  ellipse(94, 52+142, ellipseW, ellipseH);
+  ellipse(59, 73+142, ellipseW, ellipseH);
+
+  //VALUES GREATER THAN 120, BUT LESS THAN 200. RIGHT HALF OF STARS
+  ellipse(137, 38+142, ellipseW, ellipseH);
+
+  //VALUES GREATER THAN 200, BUT LESS THAN 330. LEFT RIGHT HALF OF STARS
+  ellipse(282, 89+142, ellipseW, ellipseH);
+  //ellipse(234, 18+142, ellipseW, ellipseH);
+  ellipse(263+50, 27+148, ellipseW, ellipseH);
+  ellipse(278, 49+142, ellipseW, ellipseH);
+
+  //GREATER THAN 300
+  ellipse(365, 73+142, ellipseW, ellipseH);
+  ellipse(330, 100+142, ellipseW, ellipseH);
+
+
+  if (ellipseW >= 1 && ellipseH >= 1 && ellipseW + 2 <= 3 && ellipseH + 2 <= 3) {
+    starsExist = true;
+  }							   } 
+  if (ellipseW >= 5 && ellipseH >= 5) {
+   starsExist = false;
+   starsShrink = true;
+  }
+  if (starsExist = true) {
+    ellipseW += 0.10;
+    ellipseH += 0.10;
+  }
+  if (starsExist = false){
+    starsShrink = true;
+  }
+  if (starsShrink = true) {
+    ellipseW -= 0.2;
+    ellipseH -= 0.2;
+  }
+
+  if (ellipseW < 3 && ellipseH < 3) {
+    starsOpen = true;
+  } else {
+    starsOpen = false; 
+  }
+  if(starsOpen){
+    ellipseW += 1;
+    ellipseH += 1;
+  } else {
+    ellipseW -= 2;
+    ellipseH -= 2;
+  }
 }
