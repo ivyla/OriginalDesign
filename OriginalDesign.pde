@@ -10,10 +10,11 @@ float ellipseH = 1;
 
 boolean starsOpen = true;
 
-void setup()
-{
-  size(100,100);
+void setup() {
+    size(400, 400);
+    background(0, 10, 35);
 }
+
 void draw()
 {
     ellipse(50,50,50,50);
