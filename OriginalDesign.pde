@@ -205,7 +205,7 @@ void stars() {
 float ellipseW = 1;
 float ellipseH = 1; */
 
-/*
+
   if (ellipseW >= 1 && ellipseH >= 1 && ellipseW + 2 <= 3 && ellipseH + 2 <= 3) {
     starsExist = true;
   } 
@@ -225,12 +225,8 @@ float ellipseH = 1; */
     ellipseH -= 0.2;
   }
 
-  if (ellipse >= )
-}
-
   
-*/
-}
+
 
 if (ellipseW < 3 && ellipseH < 3) {
 
@@ -254,14 +250,5 @@ if(starsOpen){
 
 
 
-/* things to do:
- -Make for loop for shadow of grass
- -Make water effects
- -Make flower?
- -Pulsing stars
- -Fix moon problem
- -Sand
- 
- */
 
  
