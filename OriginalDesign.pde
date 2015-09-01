@@ -16,7 +16,7 @@ void setup() {
 }
 
 void draw() {
-  function(); 
+  //function(); 
   //  backgrass();
   //scene();
   //below is the real moon
