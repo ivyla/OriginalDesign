@@ -29,7 +29,7 @@ void draw() {
   h2 = 5*sin(h);
   h+=0.02;
 
-  //stars();
+  stars();
 }
 
 void scene() {
