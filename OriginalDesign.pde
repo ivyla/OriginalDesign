@@ -248,5 +248,3 @@ if(starsOpen){
 
 }
 
-
-
