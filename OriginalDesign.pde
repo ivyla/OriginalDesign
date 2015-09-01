@@ -18,7 +18,7 @@ void setup() {
 void draw() {
   scene();
   //below is the real moon
-  //noStroke();
+  noStroke();
   fill(255, 255, 255);
   ellipse(320, moonY+h2, 40, 40);
   h2 = 3*sin(h);
