@@ -34,7 +34,3 @@ void draw() {
   //stars();
 }
 
-void function() {
-  //println(mouseX, mouseY);
-}
-
